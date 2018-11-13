@@ -1,4 +1,4 @@
-Application developed in Express 4, PUG, MongoDB and Bootstrap design material.
+Application developed in Express 4, PUG, MongoDB and material design Bootstrap.
 Requirements to install:
 Node, MongoDB
 

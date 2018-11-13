@@ -1,0 +1,47 @@
+extends layout
+
+block content
+
+	div.header 
+		h1	HN Feed
+		h2 we <3 hackers news!
+	.panel.panel-default
+		for todo in todos
+			.panel-body
+			.row.story.margin
+				.col-6
+					-function pretty_date(s) { 
+					-var date1 = new Date();
+					-var date2 = new Date();
+					-date1 = moment(s).format('MM/DD/YYYY');
+					-dateNow = moment().format('MM/DD/YYYY');
+					-dateAyer = moment(date1,'MM/DD/YYYY' ).add(1, 'days');	
+					-if(dateNow === dateAyer){return "Yesterday";}//Yesterday
+					-if(date1 < dateNow){return moment(s).format('ll')}//Nov 10, 2018
+					-if(date1 == dateNow){return moment(s).format('LT');}//hh:mm am or PM
+					-};
+					
+					-function validateTitle(story,title){
+					-if(story==null){return title}
+					-if(title==null){return story}
+					-if((title==null)&&(story==null)){return todo++}//discard
+					
+					-}
+					a(href='#{todo.url}') #{validateTitle(todo.story_title,todo.title)} 
+					label.author #{todo.author} -
+					
+					label.author 
+				.col
+				.col #{pretty_date(todo.created_at)}
+				.col 
+					form(action='/todos/destroy/#{todo._id}', method='post')
+						button.btn.pull-right.fa.fa-trash.fa-2x(type='submit')
+						
+			hr.margin0		
+	
+					
+					
+					
+				
+
+	

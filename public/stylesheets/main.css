@@ -1,0 +1,57 @@
+
+.header
+{   
+    font-family: 'Lobster',cursive;
+    padding-left: 100px;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    background-color: rgb(94, 89, 89);
+    width: 100%;
+    margin-left: 0px;
+    box-shadow: -1px 8px 5px -3px rgba(0, 0, 0, 0.2);
+    color:white;
+    z-index: 3;
+}
+.panel.panel-default
+{
+    margin-top: 120px;
+    margin-left: 10%;
+}
+.story
+{   
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff;
+    border: 1px;
+    color: inherit;
+    color:#333;  
+    font-size: 13px;
+}
+.author
+{
+    color: #999;
+}
+
+.story:hover{
+    background-color:#fafafa!important;
+}
+
+
+.margin0
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.container
+{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.btn.pull-right.fa.fa-trash.fa-2x
+{
+    width: 50px;
+    padding-left: 15px;
+}
